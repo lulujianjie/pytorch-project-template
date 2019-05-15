@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="Always" serverName="lujj@10.0.23.131:22" autoUploadExternalChanges="true">
+    <serverData>
+      <paths name="lujj@10.0.23.131:22">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/data/lujj/projects/pytorch-template" local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
+  </component>
+</project>
