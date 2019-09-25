@@ -1,7 +1,7 @@
 import os
 
 import torch
-from config.cfg import Cfg
+from config.config import Cfg
 from torch.backends import cudnn
 
 from utils.logger import setup_logger
@@ -17,7 +17,7 @@ if __name__ == '__main__':
 
     Cfg.freeze()
     log_dir = Cfg.DATALOADER.LOG_DIR
-    logger = setup_logger('pytorch-template', log_dir)
+    logger = setup_logger('{}'.format(Cfg.PROJECT_NAME), log_dir)
     logger.info("Running with config:\n{}".format(Cfg))
 
     os.environ['CUDA_VISIBLE_DEVICES'] = Cfg.MODEL.DEVICE_ID

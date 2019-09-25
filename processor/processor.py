@@ -7,16 +7,14 @@ from utils.meter import AverageMeter
 from utils.metrics import R1_mAP
 import numpy as np
 
-def do_train(Cfg,
+def do_train(
+        Cfg,
         model,
-        center_criterion,
         train_loader,
         val_loader,
         optimizer,
-        optimizer_center,
-        scheduler,
-        loss_fn,
-        num_query):
+        scheduler,  # modify for using self trained model
+        loss_func):
     log_period = Cfg.SOLVER.LOG_PERIOD
     checkpoint_period = Cfg.SOLVER.CHECKPOINT_PERIOD
     eval_period = Cfg.SOLVER.EVAL_PERIOD
@@ -25,8 +23,8 @@ def do_train(Cfg,
     device = "cuda"
     epochs = Cfg.SOLVER.MAX_EPOCHS
 
-    logger = logging.getLogger('face-loss-cityflow.train')
-    logger.info('start training')
+    logger = logging.getLogger(''.format(Cfg.PROJECT_NAME))
+    logger.info('Enter training')
 
     if device:
         if torch.cuda.device_count() > 1:
@@ -99,7 +97,7 @@ def do_inference(Cfg,
         num_query):
 
     device = "cuda"
-    logger = logging.getLogger("face-loss-cityflow.inference")
+    logger = logging.getLogger(''.format(Cfg.PROJECT_NAME))
     logger.info("Enter inferencing")
     evaluator = R1_mAP(num_query, max_rank=50, feat_norm=Cfg.TEST.FEAT_NORM)
 

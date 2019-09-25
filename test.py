@@ -1,6 +1,6 @@
 import os
 import sys
-from config.cfg import Cfg
+from config.config import Cfg
 
 from torch.backends import cudnn
 
