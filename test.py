@@ -1,11 +1,11 @@
 import os
 import sys
-from config.config import Cfg
+from config.default import Cfg
 
 from torch.backends import cudnn
 
 sys.path.append('.')
-from datasets import make_dataloader
+from dataset import make_dataloader
 from processor import do_inference
 from model import make_model
 from utils.logger import setup_logger

@@ -1,9 +1,9 @@
-class Config():
+class DefaultConfiguration():
     def __init__(self):
         self.PROJECT_NAME = 'pytorch-project-template'
         self.LOG_DIR = "./log/" #log dir and saved model dir
-        self.DATA_DIR = "/data/lujj/datasets/"
-        self.DEVICE_ID = "4"
+        self.DATA_DIR = "/data/lujj/dataset/"
+        self.DEVICE_ID = "0"
 
         #data loader
         self.DATALOADER_NUM_WORKERS = 8

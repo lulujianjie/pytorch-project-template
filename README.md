@@ -1,12 +1,15 @@
-# Product Name
+# Pytorch Project Template
 
-Pytorch Project Template
+This project holds a template for developing tiny projects based on PyTorch. Meanwhile, it has basic codes ready for developers in advance.
 
 ## Requirement
 
-* [yacs>=0.1.4](https://github.com/rbgirshick/yacs)
+* Pytorch >= 0.4
 
 ## Release History
 
+* 0.2.0
+    * modify basic code 
 * 0.1.0
-    * added basic project framework files and packages 
+    * add basic project framework files and packages 
+
